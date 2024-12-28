@@ -8,11 +8,9 @@ const AbstractLink = () => {
       <hr className="border-green-300" />
       <div className="flex gap-5 text-sm text-nowrap justify-center items-center text-centermt-3 py-10">
         {abstractLink.map((abstract, index) => (
-          <Link href={abstract.dappUrl}>
-            <div key={index} className=" hover:text-green-300 hover:underline">
-              {abstract.dappTitle}
-            </div>
-          </Link>
+          <div key={index} className=" hover:text-green-300 hover:underline">
+            <Link href={abstract.dappUrl}>{abstract.dappTitle}</Link>
+          </div>
         ))}
       </div>
     </div>

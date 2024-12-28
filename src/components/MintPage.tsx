@@ -106,6 +106,12 @@ export default function MintingPage() {
               <p>Limit per Wallet</p>
               <p>{claimCondition?.quantityLimitPerWallet.toString()}</p>
             </div>
+            <div className="flex flex-row justify-between items-end">
+              <p>Claimed / Supply</p>
+              <p>
+                {claimedSupply?.toString()} / {totalNFTSupply?.toString()}
+              </p>
+            </div>
             <hr />
           </div>
 

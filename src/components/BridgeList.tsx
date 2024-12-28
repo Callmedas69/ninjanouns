@@ -8,14 +8,13 @@ const BridgeList = () => {
       <div className="text-4xl mb-5">BRIDGE</div>
       <div className="flex flex-row gap-5 text-xl">
         {bridgeLink.map((bridge, index) => (
-          <Link href={bridge.dappUrl}>
-            <div
-              key={index}
-              className="border border-gray-400 rounded-lg bg-white px-3 py-1 hover:bg-green-300 text-black"
-            >
-              {bridge.dappTitle}
-            </div>
-          </Link>
+          <div key={index}>
+            <Link href={bridge.dappUrl}>
+              <div className="border border-gray-400 rounded-lg bg-white px-3 py-1 hover:bg-green-300 text-black">
+                {bridge.dappTitle}
+              </div>
+            </Link>
+          </div>
         ))}
       </div>
     </div>
