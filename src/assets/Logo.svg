@@ -1,0 +1,70 @@
+<svg width="300" height="100" xmlns="http://www.w3.org/2000/svg" viewBox="4 4 9 8">
+    <defs>
+        <style>
+            @keyframes blink {
+
+                0%,
+                92%,
+                100% {
+                    transform: translateY(0) scaleY(1);
+                }
+
+                94% {
+                    transform: translateY(0.5px) scaleY(0.1);
+                }
+
+                96% {
+                    transform: translateY(0.5px) scaleY(0.1);
+                }
+
+                98% {
+                    transform: translateY(0) scaleY(1);
+                }
+            }
+
+            .eye {
+                animation: blink 3s infinite;
+                transform-box: fill-box;
+                transform-origin: center;
+            }
+        </style>
+    </defs>
+
+    <!-- Nogs with pastel color animation -->
+    <rect class="ninja-nogs" x="4" y="8" width="1" height="1">
+        <animate attributeName="fill" values="#FFF4BD;#FFE5D9;#D4F0F0;#FFB6B9;#FCE1E4;#ff0000;#FFF4BD" dur="7s"
+            calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1"
+            repeatCount="indefinite" />
+    </rect>
+    <rect class="ninja-nogs" x="4" y="9" width="1" height="1">
+        <animate attributeName="fill" values="#FFF4BD;#FFE5D9;#D4F0F0;#FFB6B9;#FCE1E4;#ff0000;#FFF4BD" dur="7s"
+            calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1"
+            repeatCount="indefinite" />
+    </rect>
+    <rect class="ninja-nogs" x="5" y="8" width="1" height="1">
+        <animate attributeName="fill" values="#FFF4BD;#FFE5D9;#D4F0F0;#FFB6B9;#FCE1E4;#ff0000;#FFF4BD" dur="7s"
+            calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1"
+            repeatCount="indefinite" />
+    </rect>
+    <rect class="ninja-nogs" x="6" y="7" width="6" height="1">
+        <animate attributeName="fill" values="#FFF4BD;#FFE5D9;#D4F0F0;#FFB6B9;#FCE1E4;#ff0000;#FFF4BD" dur="7s"
+            calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1"
+            repeatCount="indefinite" />
+    </rect>
+    <rect class="ninja-nogs" x="8" y="8" width="2" height="2">
+        <animate attributeName="fill" values="#FFF4BD;#FFE5D9;#D4F0F0;#FFB6B9;#FCE1E4;#ff0000;#FFF4BD" dur="7s"
+            calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1"
+            repeatCount="indefinite" />
+    </rect>
+
+    <!-- Eyes with blinking animation -->
+    <g class="eye">
+        <!-- Left Eye -->
+        <rect x="6" y="8" width="1" height="2" fill="white" />
+        <rect x="7" y="8" width="1" height="2" fill="black" />
+
+        <!-- Right Eye -->
+        <rect x="10" y="8" width="1" height="2" fill="white" />
+        <rect x="11" y="8" width="1" height="2" fill="black" />
+    </g>
+</svg>
