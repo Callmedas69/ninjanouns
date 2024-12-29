@@ -18,9 +18,9 @@ const page = () => {
     <div className="min-h-screen flex flex-col">
       {/* HEADER */}
       <div className="w-full">
-        <div className="max-w-[1200px] mx-auto">
-          <header className="flex flex-row justify-between items-center mx-5 my-3">
-            <div className="flex-shrink-0">
+        <div className="md:max-w-[1200px] mx-auto">
+          <header className="flex flex-col justify-center items-center mx-5 my-3 md:flex-row md:justify-between">
+            <div className="flex-shrink-0 items-center md:items-start">
               <Image
                 src={Logo}
                 alt="Ninja Nouns"
@@ -45,7 +45,7 @@ const page = () => {
         </div>
 
         {/* BRIDGE AND FAUCET LINKS */}
-        <div className="flex flex-row justify-between items-center max-w-[1200px] mx-auto">
+        <div className="flex flex-col justify-center items-center max-w-[1200px] mx-auto md:flex-row md:justify-between md:text-center">
           <div>
             <BridgeList />
           </div>

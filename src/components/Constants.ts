@@ -28,11 +28,6 @@ export const faucetAbstract = [
         dappUrl:"https://www.alchemy.com/faucets/ethereum-sepolia",
         dappIcon:""
     },
-    {
-        dappTitle:"",
-        dappUrl:"",
-        dappIcon:""
-    },
 ]
 
 export const abstractLink = [
@@ -102,43 +97,63 @@ import Ninja10 from "@/assets/gallery/473.png"
 
 export const ninjaGallery = [
     {
-        ninjaName: "Ninja01",
-        ninjaSrc: Ninja01
+        ninjaName: "Kaku-shi",
+        ninjaSrc: Ninja01,
+        ninjaPosition:"Supreme Pixel Shadow",
+        ninjaClan:"N0unClan"
     },
     {
-        ninjaName: "Ninja02",
-        ninjaSrc: Ninja02
+        ninjaName: "Hako-maru",
+        ninjaSrc: Ninja02,
+        ninjaPosition:"Council Elder",
+        ninjaClan:"N0unClan"
     },
     {
-        ninjaName: "Ninja03",
-        ninjaSrc: Ninja03
+        ninjaName: "Bitō-kun",
+        ninjaSrc: Ninja03,
+        ninjaPosition:"Binary Defense Master",
+        ninjaClan:"N0unClan"
     },
     {
-        ninjaName: "Ninja04",
-        ninjaSrc: Ninja04
+        ninjaName: "Rasu-teru",
+        ninjaSrc: Ninja04,
+        ninjaPosition:"Grid Formation Commander",
+        ninjaClan:"N0unClan"
     },
     {
-        ninjaName: "Ninja05",
-        ninjaSrc: Ninja05
+        ninjaName: "Kido-shi",
+        ninjaSrc: Ninja05,
+        ninjaPosition:"Illumination Sage",
+        ninjaClan:"N0unClan"
     },
     {
-        ninjaName: "Ninja06",
-        ninjaSrc: Ninja06
+        ninjaName: "Masuku-jin",
+        ninjaSrc: Ninja06,
+        ninjaPosition:"Infiltration Expert",
+        ninjaClan:"N0unClan"
     },
     {
-        ninjaName: "Ninja07",
-        ninjaSrc: Ninja07
+        ninjaName: "Dotto-hime",
+        ninjaSrc: Ninja07,
+        ninjaPosition:"Royal Technomancer",
+        ninjaClan:"N0unClan"
     },
     {
-        ninjaName: "Ninja08",
-        ninjaSrc: Ninja08
+        ninjaName: "Gamen-rō",
+        ninjaSrc: Ninja08,
+        ninjaPosition:"Dimensional Tactician",
+        ninjaClan:"N0unClan"
     },
     {
-        ninjaName: "Ninja09",
-        ninjaSrc: Ninja09
+        ninjaName: "Chippu-ken",
+        ninjaSrc: Ninja09,
+        ninjaPosition:"Weapon Master",
+        ninjaClan:"N0unClan"
     },
     {
-        ninjaName: "Ninja10",
-        ninjaSrc: Ninja10
+        ninjaName: "Rezo-chan",
+        ninjaSrc: Ninja10,
+        ninjaPosition:" Transformation Specialist",
+        ninjaClan:"N0unClan"
     },
 ]
