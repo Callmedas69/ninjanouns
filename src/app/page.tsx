@@ -1,51 +1,25 @@
-import MintingPage from "@/components/MintPage";
 import React from "react";
-import { ConnectButton } from "thirdweb/react";
-import { client } from "./ClientId";
-import { defineChain } from "thirdweb";
-import { abstractTestnet } from "thirdweb/chains";
 import BridgeList from "@/components/BridgeList";
 import AbstractFaucet from "@/components/AbstractFaucet";
 import AbstractLink from "@/components/AbstractLink";
 import { Gallery } from "@/components/Gallery";
-import Image from "next/image";
-import Logo from "@/assets/Logo.svg";
-
-const chain = defineChain(abstractTestnet);
+import ProjectStory_Main from "@/components/ProjectStory_Main";
+import ContractInfoERC721 from "@/components/ContractInfo_ERC721";
 
 const page = () => {
   return (
-    <div className="min-h-screen flex flex-col">
-      {/* HEADER */}
-      <div className="w-full">
-        <div className="md:max-w-[1200px] mx-auto">
-          <header className="flex flex-col justify-center items-center mx-5 my-3 md:flex-row md:justify-between">
-            <div className="flex-shrink-0 items-center md:items-start">
-              <Image
-                src={Logo}
-                alt="Ninja Nouns"
-                width={250}
-                height={50}
-                className="h-auto"
-              />
-            </div>
-            <div>
-              <ConnectButton client={client} chain={chain} />
-            </div>
-          </header>
-        </div>
-        <hr className="border-green-300 shadow-green-50" />
-      </div>
-
+    <div className="flex flex-col max-w-[1200px] justify-center items-center mx-auto">
       {/* MAIN CONTENT */}
       <div>
-        {/* MINT SECTION */}
+        <ContractInfoERC721 />
+
         <div>
-          <MintingPage />
+          <ProjectStory_Main />
+          <hr className="border-green-300 mt-5" />
         </div>
 
         {/* BRIDGE AND FAUCET LINKS */}
-        <div className="flex flex-col justify-center items-center max-w-[1200px] mx-auto md:flex-row md:justify-between md:text-center">
+        <div className="flex flex-col justify-center items-center mx-auto md:flex-row md:justify-between md:text-center">
           <div>
             <BridgeList />
           </div>
@@ -59,11 +33,6 @@ const page = () => {
         <div>
           <Gallery />
         </div>
-      </div>
-
-      {/* FOOTER */}
-      <div className="bottom-0 w-full">
-        <AbstractLink />
       </div>
     </div>
   );

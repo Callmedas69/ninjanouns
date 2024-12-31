@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import NextAbstractWalletProvider from "../components/NextAbstractWalletProvider";
 import "./globals.css";
 import { Silkscreen } from "next/font/google";
+import Header from "@/components/Header";
+import AbstractLink from "@/components/AbstractLink";
 
 // Pixel Font
 const silkscreen = Silkscreen({
@@ -25,7 +26,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${silkscreen.className} antialiased`}>
-        <NextAbstractWalletProvider>{children}</NextAbstractWalletProvider>
+        <NextAbstractWalletProvider>
+          <div className="min-h-screen pb-28">
+            <Header />
+            {children}
+          </div>
+          {/* FOOTER */}
+          <div className="fixed bottom-0 w-full">
+            <AbstractLink />
+          </div>
+        </NextAbstractWalletProvider>
       </body>
     </html>
   );

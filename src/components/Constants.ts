@@ -1,3 +1,27 @@
+import Ninja01 from "@/assets/gallery/133.png"
+import Ninja02 from "@/assets/gallery/134.png"
+import Ninja03 from "@/assets/gallery/152.png"
+import Ninja04 from "@/assets/gallery/178.png"
+import Ninja05 from "@/assets/gallery/191.png"
+import Ninja06 from "@/assets/gallery/192.png"
+import Ninja07 from "@/assets/gallery/286.png"
+import Ninja08 from "@/assets/gallery/444.png"
+import Ninja09 from "@/assets/gallery/449.png"
+import Ninja10 from "@/assets/gallery/473.png"
+import { defineChain } from "thirdweb"
+import { abstractTestnet } from "thirdweb/chains"
+
+
+export const projectChain = defineChain(abstractTestnet)
+
+export const ERC721_Contract="0x9Ab3c0d46861928bbE0Aafb8C634a8DA49E7Df33"
+
+export const ERC1155_Contract="0x3982a3E039a74AAA788BCD0aB2BAff7Bf9478a0A"
+export const ERC1155_Supply=500
+export const ERC1155_TokenId=0
+
+
+
 export const bridgeLink = [
     {
         dappTitle:"Relay",
@@ -84,16 +108,7 @@ export const abstractLink = [
     },
 ]
 
-import Ninja01 from "@/assets/gallery/133.png"
-import Ninja02 from "@/assets/gallery/134.png"
-import Ninja03 from "@/assets/gallery/152.png"
-import Ninja04 from "@/assets/gallery/178.png"
-import Ninja05 from "@/assets/gallery/191.png"
-import Ninja06 from "@/assets/gallery/192.png"
-import Ninja07 from "@/assets/gallery/286.png"
-import Ninja08 from "@/assets/gallery/444.png"
-import Ninja09 from "@/assets/gallery/449.png"
-import Ninja10 from "@/assets/gallery/473.png"
+
 
 export const ninjaGallery = [
     {
@@ -156,4 +171,19 @@ export const ninjaGallery = [
         ninjaPosition:" Transformation Specialist",
         ninjaClan:"N0unClan"
     },
+]
+
+export const internalLink = [
+    {
+        clanPage:"Story",
+        clanPath:"/"
+    },
+    {
+        clanPage:"Seal",
+        clanPath:"/seal"
+    },
+    {
+        clanPage:"Clan",
+        clanPath:"/clan"
+    }
 ]

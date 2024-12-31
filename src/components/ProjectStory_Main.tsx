@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProjectDescriptions = () => {
+const ProjectStory_Main = () => {
   return (
     <div>
       <h1 className="pb-3 text-lg">Tale of the Pixeru Warrior</h1>
@@ -37,4 +37,4 @@ const ProjectDescriptions = () => {
   );
 };
 
-export default ProjectDescriptions;
+export default ProjectStory_Main;

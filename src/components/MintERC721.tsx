@@ -12,17 +12,18 @@ import {
   nextTokenIdToMint,
 } from "thirdweb/extensions/erc721";
 import {
-  ConnectButton,
   MediaRenderer,
   TransactionButton,
   useActiveAccount,
   useReadContract,
 } from "thirdweb/react";
-import ProjectDescriptions from "./ProjectDescriptions";
 import { Alert, AlertDescription, AlertTitle } from "./ui/alert";
 import { setTimeout } from "timers";
+import ProjectStory_Main from "./ProjectStory_Main";
+import { ERC721_Contract } from "./Constants";
+import ContractInfoERC721 from "./ContractInfo_ERC721";
 
-export default function MintingPage() {
+export default function MintERC721() {
   const account = useActiveAccount();
 
   const chain = defineChain(abstractTestnet);
@@ -36,7 +37,7 @@ export default function MintingPage() {
   const contract = getContract({
     client: client,
     chain: chain,
-    address: "0x9Ab3c0d46861928bbE0Aafb8C634a8DA49E7Df33",
+    address: ERC721_Contract,
   });
 
   const { data: contractMetadata, isLoading: isContractMetadataLoading } =
@@ -44,15 +45,13 @@ export default function MintingPage() {
       contract: contract,
     });
 
-  const { data: claimedSupply, isLoading: isClaimedSupplyLoading } =
-    useReadContract(getTotalClaimedSupply, {
-      contract: contract,
-    });
+  const { data: claimedSupply } = useReadContract(getTotalClaimedSupply, {
+    contract: contract,
+  });
 
-  const { data: totalNFTSupply, isLoading: isTotalSupplyLoading } =
-    useReadContract(nextTokenIdToMint, {
-      contract: contract,
-    });
+  const { data: totalNFTSupply } = useReadContract(nextTokenIdToMint, {
+    contract: contract,
+  });
 
   const { data: claimCondition } = useReadContract(getActiveClaimCondition, {
     contract: contract,
@@ -72,16 +71,11 @@ export default function MintingPage() {
         <div className="flex flex-col gap-4 p-6 max-w-[850px] container">
           {/* TITLE & SUBTITLE */}
           <div>
-            <p className="text-5xl font-bold text-center md:text-left">
-              {contractMetadata?.name}
-            </p>
-            <p className="text-xs italic text-center md:text-left">
-              {contractMetadata?.description}
-            </p>
+            <ContractInfoERC721 />
           </div>
           {/* DESCRIPTION */}
           <div>
-            <ProjectDescriptions />
+            <ProjectStory_Main />
           </div>
         </div>
 
@@ -195,7 +189,6 @@ export default function MintingPage() {
           </div>
         )}
       </div>
-      <hr className="flex mx-auto justify-center items-center max-w-[1200px] my-4 border-green-300" />
     </div>
   );
 }
